@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Min 一套完整的小程序组件化解决方案" />
+    <meta name="keywords" content=",蘑菇街前端团队,Min,蘑菇街Min,蘑菇街前端,min,组件化,小程序,小程序组件化,小程序组件化解决方案" />
+    <link rel="shortcut icon" href="/static/images/favicon.ico"/>
+    <title>{{title}}</title>
+    <meta name="description" content="FIS3 面向前端的工程构建系统">
+    <meta name="author" content="fis-team">
+
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/static/css/common.css">
+    <!-- Custom styles -->
+    <link href="/static/css/page.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/static/css/github.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/static/css/perfect-scrollbar.min.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="/static/js/html5shiv.js"></script>
+    <script src="/static/js/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="/static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/js/jquery.cookie.js"></script>
+    <script src="/static/js/scrollspy.js"></script>
+</head>
+
+<body>
+
+<div class="header-wrap">
+    <header>
+        <div class="logo-wrap">
+            <a href="/index.html" class="logo">
+                <img src="/static/images/logo.png" class="logo-img"/>
+                <div class="logo-text">
+                    <span class="logo-text--title">Min</span>
+                    <span class="logo-text--desc">让小程序的开发变得愉悦</span>
+                </div>
+            </a>
+            <a class="fa toggle"></a>
+        </div>
+        <nav>
+            <div class="nav-left">
+                <a href="/index.html" class="nav-link  ">首页</a>
+                <a href="/docs/install/index.html" class="nav-link  ">使用手册</a>
+                <a href="/docs/minui/index.html" class="nav-link">MinUI 组件库</a>
+            </div>
+
+            <div class="nav-right">
+                <a href="https://github.com/meili/min-cli"><i class="icon icon-wechat"></i></a>
+                <a href="https://github.com/meili/min-cli"><i class="icon icon-github"></i></a>
+                <div class="code-wechat"><img src="https://s10.mogucdn.com/mlcdn/c45406/171214_461864fllj12114eg6eg2ef68ge6e_752x974.jpg" /></div>
+            </div>
+        </nav>
+    </header>
+</div>
+<script type="text/javascript" src="/static/js/jquery.min.js"></script>
+<script language="javascript">
+    $(document).ready(function(){
+
+        $('.icon-wechat').mouseover( function() {
+            $('.code-wechat').show()
+        });
+        $('.icon-wechat').mouseout( function() {
+            $('.code-wechat').hide()
+        })
+
+    });
+
+</script>
+
+<div id="main" class="fix-sidebar">
+    <div class="sidebar">
+    {{nav}}
+    <div class="bottom-shadow"></div>
+</div>
+
+    <div class="content api with-sidebar">
+        {{content}}
+    </div>
+</div>
+
+<!-- Latest compiled and minified JavaScript, requires jQuery 1.x (2.x not supported in IE8) -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="/static/js/perfect-scrollbar.min.js"></script>
+<script type="text/javascript">
+    (function(){
+        var scrollBarEnabled = false;
+
+        function isIE( version, comparison ){
+            var $div = $('<div style="display:none;"/>').appendTo($('body'));
+            $div.html('<!--[if '+(comparison||'')+' IE '+(version||'')+']><a>&nbsp;</a><![endif]-->');
+            var ieTest = $div.find('a').length;
+            $div.remove();
+            return ieTest;
+        }
+
+        function updateScrollBar(){
+            function enableScrollBar(){
+                if (scrollBarEnabled)
+                    return;
+                scrollBarEnabled = true;
+                $(".sidebar").perfectScrollbar({
+                    wheelSpeed: 10,
+                    wheelPropagation: false
+                });
+            }
+
+            function disableScrollBar(){
+                if (!scrollBarEnabled)
+                    return;
+                scrollBarEnabled = false;
+                $(".sidebar").perfectScrollbar('destroy');
+            }
+
+            if ($(window).width()>760 && $(".sidebar").height() < $(".sidebar ul").height()){
+                enableScrollBar();
+            }else{
+                disableScrollBar();
+            }
+        }
+
+        //设置链接当前样式
+        function setActive(){
+            var href= window.location.href;
+            $(".sidebar li a").each(function(){
+                var link = $(this).attr("href");
+                if(String(href).indexOf(link) > -1){
+                    $(this).addClass("active");
+                }
+            })
+        }
+
+        //生成左边导航用于在移动端查看使用
+        function buildSideNav(){
+            $("nav .nav-left").clone().attr("class","main-nav").prependTo($(".sidebar"));
+
+            $(".header-wrap .toggle").addClass("fa-list").on("click",function(){
+                $(".sidebar").toggleClass("open");
+                return false;
+            })
+
+            $("html").on("click",function(e){
+                console.log(e.target);
+                $(".sidebar").removeClass("open");
+            })
+
+            $(".sidebar").bind("click",function(e){
+                e && e.stopPropagation();
+            })
+        }
+
+        //hash平滑滚动，a链接添加active
+        $('.sidebar li a').click(function(){
+            $('.sidebar li a').removeClass("active");
+            $(this).addClass("active");
+            $(".sidebar").removeClass("open");
+        });
+
+        setActive();
+        buildSideNav();
+
+
+        if (!isIE(8, 'lte')){
+            $(".sidebar").addClass('scrollbar');
+            updateScrollBar();
+            $(window).resize(updateScrollBar);
+        }
+
+
+
+        //判断滚动方向，动态隐藏导航条
+        var lastScrollTop = 0;
+        $(window).scroll(function(event){
+            if($(window).width()>720){
+                var st = $(this).scrollTop();
+                var range = st - lastScrollTop;
+                if(range > 5){
+                    $("body").addClass("hide-header");
+                }else if(range < -5){
+                    $("body").removeClass("hide-header");
+                }
+            }else{
+                $("body").removeClass("hide-header");
+            }
+            lastScrollTop = st;
+        });
+    }());
+</script>
+
+</body>
+</html>

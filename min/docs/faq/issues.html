@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Min 一套完整的小程序组件化解决方案" />
+    <meta name="keywords" content=",蘑菇街前端团队,Min,蘑菇街Min,蘑菇街前端,min,组件化,小程序,小程序组件化,小程序组件化解决方案" />
+    <link rel="shortcut icon" href="/static/images/favicon.ico"/>
+    <title>Min :  常见问题</title>
+    <meta name="description" content="FIS3 面向前端的工程构建系统">
+    <meta name="author" content="fis-team">
+
+    <!-- Enable responsive viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/static/css/common.css">
+    <!-- Custom styles -->
+    <link href="/static/css/page.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/static/css/github.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/static/css/perfect-scrollbar.min.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="/static/js/html5shiv.js"></script>
+    <script src="/static/js/respond.min.js"></script>
+    <![endif]-->
+
+    <script src="/static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/js/jquery.cookie.js"></script>
+    <script src="/static/js/scrollspy.js"></script>
+</head>
+
+<body>
+
+<div class="header-wrap">
+    <header>
+        <div class="logo-wrap">
+            <a href="/index.html" class="logo">
+                <img src="/static/images/logo.png" class="logo-img"/>
+                <div class="logo-text">
+                    <span class="logo-text--title">Min</span>
+                    <span class="logo-text--desc">让小程序的开发变得愉悦</span>
+                </div>
+            </a>
+            <a class="fa toggle"></a>
+        </div>
+        <nav>
+            <div class="nav-left">
+                <a href="/index.html" class="nav-link  is-active">首页</a>
+                <a href="/docs/install/index.html" class="nav-link  is-active">使用手册</a>
+                <a href="/docs/minui/index.html" class="nav-link">MinUI 组件库</a>
+            </div>
+
+            <div class="nav-right">
+                <a href="https://github.com/meili/min-cli"><i class="icon icon-wechat"></i></a>
+                <a href="https://github.com/meili/min-cli"><i class="icon icon-github"></i></a>
+                <div class="code-wechat"><img src="https://s10.mogucdn.com/mlcdn/c45406/171214_461864fllj12114eg6eg2ef68ge6e_752x974.jpg" /></div>
+            </div>
+        </nav>
+    </header>
+</div>
+<script type="text/javascript" src="/static/js/jquery.min.js"></script>
+<script language="javascript">
+    $(document).ready(function(){
+
+        $('.icon-wechat').mouseover( function() {
+            $('.code-wechat').show()
+        });
+        $('.icon-wechat').mouseout( function() {
+            $('.code-wechat').hide()
+        })
+
+    });
+
+</script>
+
+<div id="main" class="fix-sidebar">
+    <div class="sidebar">
+    <!-- - 介绍
+  - [Min 是什么](./introduction/index.md)
+  - [为什么选择 Min](./introduction/why-min.md)
+  - [Min 有哪些特性](./introduction/character.md)
+  - [MinUI 是什么](./introduction/minui.md) -->
+<ul>
+<li><a href="/docs/install/index.html">安装</a></li>
+<li><a href="/docs/quick-start/index.html">快速入门</a><ul>
+<li><a href="/docs/quick-start/min-weapp-example.html">小程序示例</a></li>
+<li><a href="/docs/quick-start/min-ui-example.html">组件库示例</a></li>
+</ul>
+</li>
+<li>使用文档<ul>
+<li><a href="/docs/min-cli/app-project/index.html">Min小程序项目</a><ul>
+<li><a href="/docs/min-cli/app-project/init/index.html">初始化项目</a></li>
+<li><a href="/docs/min-cli/app-project/new/index.html">新建页面</a></li>
+<li><a href="/docs/min-cli/app-project/dev/index.html">调试页面</a></li>
+<li><a href="/docs/min-cli/app-project/build/index.html">编译项目</a></li>
+</ul>
+</li>
+<li><a href="/docs/min-cli/wxc-project/index.html">Min组件库项目</a><ul>
+<li><a href="/docs/min-cli/wxc-project/init/index.html">初始化项目</a></li>
+<li><a href="/docs/min-cli/wxc-project/new/index.html">新建组件</a></li>
+<li><a href="/docs/min-cli/wxc-project/dev/index.html">调试组件</a></li>
+<li><a href="/docs/min-cli/wxc-project/publish/index.html">发布组件</a></li>
+</ul>
+</li>
+<li><a href="/docs/min-cli/third-project/index.html">已有小程序项目</a><ul>
+<li><a href="/docs/min-cli/third-project/install/index.html">安装组件</a></li>
+<li><a href="/docs/min-cli/third-project/update/index.html">更新组件</a></li>
+<li><a href="/docs/min-cli/third-project/using/index.html">使用组件</a></li>
+<li><a href="/docs/min-cli/third-project/tutorial/with-wepy.html">结合WePY</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="/docs/features/index.html">功能特性</a><ul>
+<li><a href="/docs/features/single-file-mode.html">单文件模式</a></li>
+<li><a href="/docs/features/npm.html">支持加载外部 NPM 包</a></li>
+<li><a href="/docs/features/babel.html">支持 ES6/7 新特性</a></li>
+<li><a href="/docs/features/style.html">支持多种样式预编译</a></li>
+<li><a href="/docs/features/demo-api.html">自动集成示例文档</a></li>
+</ul>
+</li>
+<li><a href="/docs/advance/index.html">进阶介绍</a><ul>
+<li><a href="/docs/advance/config.html">min.config.json 配置</a></li>
+<li><a href="/docs/advance/single-file-explain.html">单文件说明</a></li>
+<li><a href="/docs/advance/global-layout.html">全局公共模板</a></li>
+<li><a href="/docs/advance/global-setting.html">全局可配置化</a></li>
+</ul>
+</li>
+<li><a href="/docs/prepare/index.html">预备知识</a><ul>
+<li><a href="/docs/prepare/wx-api.html">微信小程序文档</a></li>
+<li><a href="/docs/prepare/wx-tool.html">微信开发者工具</a></li>
+<li><a href="/docs/prepare/high-light.html">代码高亮</a></li>
+</ul>
+</li>
+<li><a href="/docs/faq/index.html">注意事项</a><ul>
+<li><a href="/docs/faq/point.html">重要提醒</a></li>
+<li><a href="/docs/faq/issues.html">常见问题</a></li>
+<li><a href="/docs/faq/feedback.html">问题反馈</a></li>
+</ul>
+</li>
+<li><a href="/docs/changelog/index.html">版本日志</a><ul>
+<li><a href="/docs/changelog/index.html#v1.0.5%EF%BC%882017.12.11%EF%BC%89">v1.0.5（2017.12.11）</a></li>
+<li><a href="/docs/changelog/index.html#v1.0.4%EF%BC%882017.11.29%EF%BC%89">v1.0.4（2017.11.29）</a></li>
+<li><a href="/docs/changelog/index.html#v1.0.3%EF%BC%882017.11.16%EF%BC%89">v1.0.3（2017.11.16）</a></li>
+<li><a href="/docs/changelog/index.html#v1.0.2%EF%BC%882017.11.10%EF%BC%89">v1.0.2（2017.11.10）</a></li>
+<li><a href="/docs/changelog/index.html#v1.0.1%EF%BC%882017.11.02%EF%BC%89">v1.0.1（2017.11.02）</a></li>
+</ul>
+</li>
+</ul>
+
+    <div class="bottom-shadow"></div>
+</div>
+
+    <div class="content api with-sidebar">
+        <a name="%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98" class="title-anchor"></a><h3 class="" id="常见问题">常见问题</h3><p>本节收集了使用者们的反馈，汇总成常见问题，在此感谢 Min 的使用者们，你们的反馈会让我们走得更远。</p>
+<p><strong>1、在已有项目中安装wxc-tab组件，不会编译panel，label组件。</strong></p>
+<p>该问题是由于安装组件时默认以index.wxc为入口文件进行编译，而tab组件比较特殊，其目录下还有panel, label这两个入口文件，未对其进行编译。该问题已经修复，如果遇到该问题，请升级 min 到 1.0.5-beta.1 及以上版本，升级命令：</p>
+<pre><code class="hljs lang-bash">$ npm <span class="hljs-operator"><span class="hljs-keyword">install</span> -<span class="hljs-keyword">g</span> @mindev/<span class="hljs-keyword">min</span>-cli</span>
+</code></pre>
+<p><strong>2、wepy与min的结合使用问题。</strong></p>
+<p>使用 wepy 时要求在微信开发者工具中关闭 es6=&gt;es5，而 min 编译的输出文件是 es6 代码，直接冲突导致不可用。目前 min-cli 已增加 babel 配置项，编译时将文件转换成 es5。</p>
+<p>第二个问题是在 wepy 项目中使用 wxc-toast 等组件时，由于 wepy 的 Page 对象被封装过，没有 selectComponent 等方法，通过 this.$wxpage.selectComponent 可调用该方法。</p>
+<p>wepy与min的结合使用问题详细请参考：  <a href="/docs/using/with-wepy.html">结合 wepy</a> 以及 <a href="/docs/faq/point.html">重要提醒</a> </p>
+<p><strong>3、min 打包时没有将 src 目录下的非单文件的静态资源拷贝到打包目录中。</strong></p>
+<p>该问题还在修复中，敬请期待。目前的解决办法是手动将静态资源目录拷贝到打包目录中去，或者将静态资源文件全部上传到 cdn 上。</p>
+<p><strong>4、style 标签中 import less 文件报错。</strong></p>
+<p>style 标签中 import less 文件， min 打包时默认是查找wxss文件，导致报错。该问题已在 min  <strong>1.0.5</strong> 版本中修复。</p>
+
+    </div>
+</div>
+
+<!-- Latest compiled and minified JavaScript, requires jQuery 1.x (2.x not supported in IE8) -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="/static/js/perfect-scrollbar.min.js"></script>
+<script type="text/javascript">
+    (function(){
+        var scrollBarEnabled = false;
+
+        function isIE( version, comparison ){
+            var $div = $('<div style="display:none;"/>').appendTo($('body'));
+            $div.html('<!--[if '+(comparison||'')+' IE '+(version||'')+']><a>&nbsp;</a><![endif]-->');
+            var ieTest = $div.find('a').length;
+            $div.remove();
+            return ieTest;
+        }
+
+        function updateScrollBar(){
+            function enableScrollBar(){
+                if (scrollBarEnabled)
+                    return;
+                scrollBarEnabled = true;
+                $(".sidebar").perfectScrollbar({
+                    wheelSpeed: 10,
+                    wheelPropagation: false
+                });
+            }
+
+            function disableScrollBar(){
+                if (!scrollBarEnabled)
+                    return;
+                scrollBarEnabled = false;
+                $(".sidebar").perfectScrollbar('destroy');
+            }
+
+            if ($(window).width()>760 && $(".sidebar").height() < $(".sidebar ul").height()){
+                enableScrollBar();
+            }else{
+                disableScrollBar();
+            }
+        }
+
+        //设置链接当前样式
+        function setActive(){
+            var href= window.location.href;
+            $(".sidebar li a").each(function(){
+                var link = $(this).attr("href");
+                if(String(href).indexOf(link) > -1){
+                    $(this).addClass("active");
+                }
+            })
+        }
+
+        //生成左边导航用于在移动端查看使用
+        function buildSideNav(){
+            $("nav .nav-left").clone().attr("class","main-nav").prependTo($(".sidebar"));
+
+            $(".header-wrap .toggle").addClass("fa-list").on("click",function(){
+                $(".sidebar").toggleClass("open");
+                return false;
+            })
+
+            $("html").on("click",function(e){
+                console.log(e.target);
+                $(".sidebar").removeClass("open");
+            })
+
+            $(".sidebar").bind("click",function(e){
+                e && e.stopPropagation();
+            })
+        }
+
+        //hash平滑滚动，a链接添加active
+        $('.sidebar li a').click(function(){
+            $('.sidebar li a').removeClass("active");
+            $(this).addClass("active");
+            $(".sidebar").removeClass("open");
+        });
+
+        setActive();
+        buildSideNav();
+
+
+        if (!isIE(8, 'lte')){
+            $(".sidebar").addClass('scrollbar');
+            updateScrollBar();
+            $(window).resize(updateScrollBar);
+        }
+
+
+
+        //判断滚动方向，动态隐藏导航条
+        var lastScrollTop = 0;
+        $(window).scroll(function(event){
+            if($(window).width()>720){
+                var st = $(this).scrollTop();
+                var range = st - lastScrollTop;
+                if(range > 5){
+                    $("body").addClass("hide-header");
+                }else if(range < -5){
+                    $("body").removeClass("hide-header");
+                }
+            }else{
+                $("body").removeClass("hide-header");
+            }
+            lastScrollTop = st;
+        });
+    }());
+</script>
+
+</body>
+</html>
