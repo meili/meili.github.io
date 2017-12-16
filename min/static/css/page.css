@@ -581,7 +581,8 @@ ul.demo li {
   .header-wrap .toggle{
     display: inline-block;
     width: 30px;
-    font-size: 14px;
+    font-size: 24px;
+    margin-top: 2px;
   }
   .header-wrap header{
     padding: 0px 20px;
@@ -591,6 +592,9 @@ ul.demo li {
   }
   .content{
     padding-top: 0px;
+  }
+  .header-wrap .logo-wrap .logo {
+    display: none;
   }
 }
 @media screen and (max-width: 720px) {

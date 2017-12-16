@@ -203,7 +203,7 @@ section.back-blue .section-heading{
 }
 .min-data .number{
   display: inline-block;
-  min-width: 25%;
+  min-width: 30%;
   max-width: 33%;
   height: 100%;
   color: #fff;
@@ -815,6 +815,22 @@ section.back-blue .section-heading{
   /*border: 1px solid #00CFC4;*/
   border:  1px solid #e1e1e1;
   padding: 15px;
+}
+@media screen and (max-width:720px) {
+  .item-list {
+    width: 100%;
+    height: auto;
+  }
+  .section--position {
+    padding-bottom: 20px;
+  }
+
+  .min-data {
+    font-size: 12px;
+  }
+  .min-data .number span {
+    font-size: 2em;
+  }
 }
 .item-list:hover {
   /* color: #fff; */

@@ -13,9 +13,9 @@
     <!-- Enable responsive viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="/min/static/css/common_40d73ef.css">
+    <link rel="stylesheet" href="/min/static/css/common_86e5888.css">
     <!-- Custom styles -->
-    <link href="/min/static/css/page_31c6c6d.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/min/static/css/page_3f0538b.css" rel="stylesheet" type="text/css" media="all">
     <link href="/min/static/css/github_5dbe7fc.css" rel="stylesheet" type="text/css" media="all">
     <link href="/min/static/css/perfect-scrollbar.min_0321076.css" rel="stylesheet">
 
@@ -43,7 +43,7 @@
                     <span class="logo-text--desc">让小程序的开发变得愉悦</span>
                 </div>
             </a>
-            <a class="fa toggle"></a>
+            <a class="icon toggle"></a>
         </div>
         <nav>
             <div class="nav-left">
@@ -300,7 +300,7 @@
         function buildSideNav(){
             $("nav .nav-left").clone().attr("class","main-nav").prependTo($(".sidebar"));
 
-            $(".header-wrap .toggle").addClass("fa-list").on("click",function(){
+            $(".header-wrap .toggle").addClass("icon-list").on("click",function(){
                 $(".sidebar").toggleClass("open");
                 return false;
             })
