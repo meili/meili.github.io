@@ -6,14 +6,14 @@
     <meta name="description" content="Min 一套完整的小程序组件化解决方案" />
     <meta name="keywords" content=",蘑菇街前端团队,Min,蘑菇街Min,蘑菇街前端,min,组件化,小程序,小程序组件化,小程序组件化解决方案" />
     <link rel="shortcut icon" href="/min/static/images/favicon.ico"/>
-    <title>Min :  发布组件</title>
+    <title>Min -  发布组件</title>
     <meta name="description" content="Min 一套完整的小程序组件化解决方案">
     <meta name="author" content="min-team">
 
     <!-- Enable responsive viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="/min/static/css/common_22693f5.css">
+    <link rel="stylesheet" href="/min/static/css/common_40d73ef.css">
     <!-- Custom styles -->
     <link href="/min/static/css/page_31c6c6d.css" rel="stylesheet" type="text/css" media="all">
     <link href="/min/static/css/github_5dbe7fc.css" rel="stylesheet" type="text/css" media="all">
@@ -53,14 +53,14 @@
             </div>
 
             <div class="nav-right">
-                <a href="https://github.com/meili/min-cli"><i class="icon icon-wechat"></i></a>
+                <span><i class="icon icon-wechat"></i></span>
                 <a href="https://github.com/meili/min-cli"><i class="icon icon-github"></i></a>
                 <div class="code-wechat"><img src="https://s10.mogucdn.com/mlcdn/c45406/171214_461864fllj12114eg6eg2ef68ge6e_752x974.jpg" /></div>
             </div>
         </nav>
     </header>
 </div>
-<script type="text/javascript" src="/min/static/js/jquery.min.js"></script>
+<script type="text/javascript" src="/min/static/js/jquery.min_7dc7ccf.js"></script>
 <script language="javascript">
     $(document).ready(function(){
 
@@ -113,7 +113,7 @@
 </li>
 </ul>
 </li>
-<li><a href="/min/docs/features/index.html">功能特性</a><ul>
+<li>功能特性<ul>
 <li><a href="/min/docs/features/single-file-mode.html">单文件模式</a></li>
 <li><a href="/min/docs/features/npm.html">支持加载外部 NPM 包</a></li>
 <li><a href="/min/docs/features/babel.html">支持 ES6/7 新特性</a></li>
@@ -121,7 +121,7 @@
 <li><a href="/min/docs/features/demo-api.html">自动集成示例文档</a></li>
 </ul>
 </li>
-<li><a href="/min/docs/advance/index.html">进阶介绍</a><ul>
+<li>进阶介绍<ul>
 <li><a href="/min/docs/advance/config.html">min.config.json 配置</a></li>
 <li><a href="/min/docs/advance/single-file-explain.html">单文件说明</a></li>
 <li><a href="/min/docs/advance/global-layout.html">全局公共模板</a></li>
@@ -155,7 +155,7 @@
 
     <div class="content api with-sidebar">
         <a name="%E5%8F%91%E5%B8%83%E7%BB%84%E4%BB%B6" class="title-anchor"></a><h3 class="" id="发布组件">发布组件</h3><blockquote>
-<p><strong>Min组件库项目</strong> 下的每个组件是独立完整的 package，用户可以将 组件package 发布到 NPM 仓库</p>
+<p><strong>Min组件库项目</strong> 下的每个组件是独立完整的 <strong>npm package</strong>，用户可以将 组件package 发布到 NPM 仓库</p>
 </blockquote>
 <pre><code class="hljs lang-bash">$ <span class="hljs-built_in">min</span> publish
 </code></pre>
@@ -167,7 +167,7 @@
 <li>全自动化流程操作，轻松管理组件版本发布</li>
 </ul>
 <a name="%E5%8F%91%E5%B8%83%E6%AD%A5%E9%AA%A4" class="title-anchor"></a><h4 class="" >发布步骤</h4><ul>
-<li>进入<strong>Min组件库项目</strong>的根目录</li>
+<li>进入 <strong>Min组件库项目</strong> 的根目录</li>
 </ul>
 <pre><code class="hljs lang-bash"><span class="hljs-variable">$ </span>cd ~<span class="hljs-regexp">/your_weapp_project/</span>
 </code></pre>
@@ -177,7 +177,7 @@
 <pre><code class="hljs lang-bash">$ <span class="hljs-built_in">min</span> publish toast
 </code></pre>
 <ul>
-<li><p>此时，进入<code>发布流程</code>的选项界面，开发者按照命令行上的提示输入或选择来完成操作</p>
+<li><p>此时，进入<code>发布流程</code>的选项界面，开发者请按照命令行上的交互式问题来完成具体操作</p>
 <ul>
 <li>选择组件新版本号。（假设当前 toast 组件版本号为1.0.0，Min 工具将会基于语义化版本控制规范 <code>SemVer</code> 输出以下可选版本列表）</li>
 </ul>
@@ -191,7 +191,7 @@
 - Custom
 </code></pre>
 <ul>
-<li>开发者选择新版本号后，会看到以下确认信息。（假设新版号选择 Patch (1.0.1)）</li>
+<li>选择新版本号后，会看到以下确认信息。（假设新版号选择 Patch (1.0.1)）</li>
 </ul>
 <pre><code class="hljs lang-bash">Changes:
 - wxc-toast: <span class="hljs-number">1.0</span><span class="hljs-number">.0</span> =&gt; <span class="hljs-number">1.0</span><span class="hljs-number">.1</span>
@@ -209,7 +209,7 @@ Are you sure you want to publish the above changes? (ynH)
 <li>完成上个步骤，Min 工具将进入自动化发布阶段<ul>
 <li>更新组件 version 版本号</li>
 <li>发布 组件package 到 NPM 仓库</li>
-<li>生成 tag @minui/wxc-toast@1.0.1 并推到 git 服务器</li>
+<li>生成 tag @minui/wxc-toast@1.0.1 并推到 git 仓库</li>
 </ul>
 </li>
 </ul>
@@ -219,7 +219,7 @@ Are you sure you want to publish the above changes? (ynH)
 <pre><code class="hljs lang-bash">$ <span class="hljs-built_in">min</span> publish
 </code></pre>
 <ul>
-<li><p>此时，进入<code>选择发布方式</code> 的选项界面，开发者按照命令行上的提示输入或选择来完成操作</p>
+<li><p>此时，进入<code>选择发布方式</code> 的选项界面，开发者请按照命令行上的交互式问题来完成具体操作</p>
 <ul>
 <li>请选择发布方式，此时请选择 <strong> 发布项目里的每个组件 </strong></li>
 </ul>
@@ -227,14 +227,14 @@ Are you sure you want to publish the above changes? (ynH)
 </span>-<span class="ruby"> 发布项目里的每个组件</span>
 </code></pre>
 </li>
-<li><p>选择 <strong> 发布项目里的每个组件 </strong>，将进入【使用姿势 - 发布流程】环节</p>
+<li><p>选择 <strong> 发布项目里的每个组件 </strong>，将进入【发布步骤 - 发布流程】环节</p>
 </li>
-<li><p>选择 <strong> 手动选择要发布的组件 </strong>，与 <code>min publish [name]</code> 用法相同，都是用于发布单个组件，此时 Min 工具将会输出组件列表，开发者从列表里选择需要发布的后，再进入【使用姿势 - 发布流程】环节</p>
+<li><p>选择 <strong> 手动选择要发布的组件 </strong>（与 <code>min publish [name]</code> 用法相同，都是用于发布单个组件），此时将进入选择组件的交互式问答，再进入【发布步骤 - 发布流程】环节</p>
 </li>
 </ul>
 <blockquote>
 <p>注意：</p>
-<p>在发布组件前，开发者需要确认当前<strong>Min组件库项目</strong>里是否具备以下几点</p>
+<p>在发布组件前，开发者需要确认当前 <strong>Min组件库项目</strong> 里是否具备以下几点</p>
 <ul>
 <li>要求 packages 组件库目录下里至少有一个 组件package</li>
 <li>要求当前项目已使用 git 源代码管理，且代码已提交</li>

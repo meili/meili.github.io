@@ -6,14 +6,14 @@
     <meta name="description" content="Min 一套完整的小程序组件化解决方案" />
     <meta name="keywords" content=",蘑菇街前端团队,Min,蘑菇街Min,蘑菇街前端,min,组件化,小程序,小程序组件化,小程序组件化解决方案" />
     <link rel="shortcut icon" href="/min/static/images/favicon.ico"/>
-    <title>Min :  全局公共模板</title>
+    <title>Min -  全局公共模板</title>
     <meta name="description" content="Min 一套完整的小程序组件化解决方案">
     <meta name="author" content="min-team">
 
     <!-- Enable responsive viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="/min/static/css/common_22693f5.css">
+    <link rel="stylesheet" href="/min/static/css/common_40d73ef.css">
     <!-- Custom styles -->
     <link href="/min/static/css/page_31c6c6d.css" rel="stylesheet" type="text/css" media="all">
     <link href="/min/static/css/github_5dbe7fc.css" rel="stylesheet" type="text/css" media="all">
@@ -53,14 +53,14 @@
             </div>
 
             <div class="nav-right">
-                <a href="https://github.com/meili/min-cli"><i class="icon icon-wechat"></i></a>
+                <span><i class="icon icon-wechat"></i></span>
                 <a href="https://github.com/meili/min-cli"><i class="icon icon-github"></i></a>
                 <div class="code-wechat"><img src="https://s10.mogucdn.com/mlcdn/c45406/171214_461864fllj12114eg6eg2ef68ge6e_752x974.jpg" /></div>
             </div>
         </nav>
     </header>
 </div>
-<script type="text/javascript" src="/min/static/js/jquery.min.js"></script>
+<script type="text/javascript" src="/min/static/js/jquery.min_7dc7ccf.js"></script>
 <script language="javascript">
     $(document).ready(function(){
 
@@ -113,7 +113,7 @@
 </li>
 </ul>
 </li>
-<li><a href="/min/docs/features/index.html">功能特性</a><ul>
+<li>功能特性<ul>
 <li><a href="/min/docs/features/single-file-mode.html">单文件模式</a></li>
 <li><a href="/min/docs/features/npm.html">支持加载外部 NPM 包</a></li>
 <li><a href="/min/docs/features/babel.html">支持 ES6/7 新特性</a></li>
@@ -121,7 +121,7 @@
 <li><a href="/min/docs/features/demo-api.html">自动集成示例文档</a></li>
 </ul>
 </li>
-<li><a href="/min/docs/advance/index.html">进阶介绍</a><ul>
+<li>进阶介绍<ul>
 <li><a href="/min/docs/advance/config.html">min.config.json 配置</a></li>
 <li><a href="/min/docs/advance/single-file-explain.html">单文件说明</a></li>
 <li><a href="/min/docs/advance/global-layout.html">全局公共模板</a></li>
@@ -154,26 +154,29 @@
 </div>
 
     <div class="content api with-sidebar">
-        <a name="%E5%85%A8%E5%B1%80%E5%85%AC%E5%85%B1%E6%A8%A1%E6%9D%BF" class="title-anchor"></a><h3 class="" id="全局公共模板">全局公共模板</h3><p>用户可以将各个页面中相同部分抽离成公共模块，通过全局公共模板的方式将这些模块进行统一管理和套用生成，以便于在各个页面中复用起来，也有助于代码维护。</p>
-<a name="%E4%B8%BE%E4%BE%8B" class="title-anchor"></a><h4 class="" >举例</h4><p>用户使用 Min 的 init 指令初始化一个小程序项目后，项目里默认使用了 <strong>全局公共模板</strong>。通过小程序开发者工具里预览项目，我们可以在图示上看到标识着 <strong>头部模板</strong> 和 <strong>底部模板</strong> 的两个公共模块，所有的页面都会直接套用它，而中间这部分才是页面真正的内容。</p>
+        <a name="%E5%85%A8%E5%B1%80%E5%85%AC%E5%85%B1%E6%A8%A1%E6%9D%BF" class="title-anchor"></a><h3 class="" id="全局公共模板">全局公共模板</h3><p>用户可以将各个页面中相同部分抽离成公共模块，通过全局公共模板的方式将这些模块进行统一维护和套用生成，以便于在各个页面中复用起来，也有助于代码维护。</p>
+<a name="%E4%B8%BE%E4%BE%8B" class="title-anchor"></a><h4 class="" >举例</h4><p>用户使用 Min 的 init 指令初始化一个 <a href="/min/docs/min-cli/app-project/init/index.html">Min小程序项目</a> ，项目里默认使用了 <strong>全局公共模板</strong>。通过小程序开发者工具里预览项目，我们可以在图示上看到标识着 <strong>头部模板</strong> 和 <strong>底部模板</strong> 的两个公共模块，所有的页面都会直接套用它，而中间这部分才是页面真正的内容。</p>
 <p><img src="https://s10.mogucdn.com/mlcdn/c45406/171213_0l1bgi0818c1dlljld78af72e69li_324x572.jpg" alt="首页"></p>
-<p>此时，如果你新建一个页面，将会发现新的页面中已经直接套用公共模板。(这里假设新建一个about页面举例)
+<p>此时，如果你新建一个页面，将会发现新的页面也已经直接套用公共模板。(这里假设新建一个about页面举例)
 <img src="https://s10.mogucdn.com/mlcdn/c45406/171213_6g305dgbk66b48jec057492ebae8c_324x572.jpg" alt="关于"></p>
-<a name="%E5%A5%97%E7%94%A8%E6%A8%A1%E6%9D%BF%E7%94%9F%E6%88%90%E9%A1%B5%E9%9D%A2" class="title-anchor"></a><h4 class="" >套用模板生成页面</h4><p>在 app.wxa 小程序配置项文件，template 标签里的内容定义为全局公共模板，用于生成页面套用的模板，而模板内的 <code>&lt;page&gt;&lt;/page&gt;</code> 标签就是页面内容占位符。模板内容可以是任意的原生或自定义组件，自定义组件支持引用外部NPM包。</p>
+<a name="%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8" class="title-anchor"></a><h4 class="" >如何使用</h4><p>在 app.wxa 小程序配置项文件，template 标签里的内容定义为全局公共模板，用于生成页面套用的模板，而模板内的 <code>&lt;page&gt;&lt;/page&gt;</code> 标签就是页面内容占位符。模板内容可以是任意的原生或自定义组件，自定义组件支持引用外部NPM包。</p>
 <p>app.wxa 文件结构</p>
 <pre><code class="hljs lang-html"><span class="hljs-tag">&lt;<span class="hljs-title">template</span>&gt;</span>
+  <span class="hljs-comment">&lt;!-- 公共模板 - start --&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-title">view</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">layout-head</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">layout-head</span>&gt;</span>
 
-    <span class="hljs-comment">&lt;!-- wxp template --&gt;</span>
+    <span class="hljs-comment">&lt;!-- page页面占位符 --&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-title">page</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">page</span>&gt;</span>
 
     <span class="hljs-tag">&lt;<span class="hljs-title">layout-foot</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">layout-foot</span>&gt;</span>
   <span class="hljs-tag">&lt;/<span class="hljs-title">view</span>&gt;</span>
+  <span class="hljs-comment">&lt;!-- 公共模板 - end --&gt;</span>
 <span class="hljs-tag">&lt;/<span class="hljs-title">template</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="javascript">
   <span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> {
     config: {
+      <span class="hljs-comment">// 公共组件</span>
       usingComponents: {
         <span class="hljs-string">'layout-head'</span>: <span class="hljs-string">'layout/head'</span>,
         <span class="hljs-string">'layout-foot'</span>: <span class="hljs-string">'layout/foot'</span>
@@ -205,7 +208,7 @@
 
 <span class="hljs-tag">&lt;<span class="hljs-title">style</span>&gt;</span><span class="css"></span><span class="hljs-tag">&lt;/<span class="hljs-title">style</span>&gt;</span>
 </code></pre>
-<p>经 Min 的 dev 指令编译后，home.wxp 文件将会生成4个原生小程序文件，而 <code>&lt;template&gt;&lt;/template&gt;</code> 标签将直接套用公共模板生成 page.wxml 文件</p>
+<p>经 Min 的 dev 指令编译后，page.wxp 文件将会生成4个原生小程序文件（.js、.wxml、.wxss、.json），而其中的 <strong>page.wxml 结构文件</strong> 是由 page.wxp 和 app.wxa 的 <code>&lt;template&gt;&lt;/template&gt;</code> 标签进行模板套用后生成的</p>
 <pre><code class="hljs lang-html"><span class="hljs-tag">&lt;view&gt;</span>
   <span class="hljs-tag">&lt;layout-head&gt;</span><span class="hljs-tag">&lt;/layout-head&gt;</span>
 
@@ -214,7 +217,7 @@
   <span class="hljs-tag">&lt;layout-foot&gt;</span><span class="hljs-tag">&lt;/layout-foot&gt;</span>
 <span class="hljs-tag">&lt;/view&gt;</span>
 </code></pre>
-<p>同时 app.wxa 与 page.wxp 的 <code>&lt;script&gt;&lt;/script&gt;</code> 标签中 config 对象的 usingComponents 字段将合并一起生成 page.json 配置文件</p>
+<p>同时 <strong>page.json 配置文件</strong> 是由 page.wxp 与 app.wxa 的 <code>&lt;script&gt;&lt;/script&gt;</code> 标签中 config 对象的 usingComponents 字段合并生成的</p>
 <pre><code class="hljs lang-json">{
   "<span class="hljs-attribute">usingComponents</span>": <span class="hljs-value">{
     "<span class="hljs-attribute">layout-head</span>": <span class="hljs-value"><span class="hljs-string">"./you/path/layout/head"</span></span>,

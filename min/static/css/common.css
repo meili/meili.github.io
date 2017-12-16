@@ -283,7 +283,8 @@ nav .nav-right {
   top: 15px;
   font-size: 18px;
 }
-nav .nav-right a{
+nav .nav-right a,
+nav .nav-right span{
   display: block;
   color: white;
   width: 40px;

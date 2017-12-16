@@ -6,14 +6,14 @@
     <meta name="description" content="Min 一套完整的小程序组件化解决方案" />
     <meta name="keywords" content=",蘑菇街前端团队,Min,蘑菇街Min,蘑菇街前端,min,组件化,小程序,小程序组件化,小程序组件化解决方案" />
     <link rel="shortcut icon" href="/min/static/images/favicon.ico"/>
-    <title>Min :  重要提醒</title>
+    <title>Min -  重要提醒</title>
     <meta name="description" content="Min 一套完整的小程序组件化解决方案">
     <meta name="author" content="min-team">
 
     <!-- Enable responsive viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="/min/static/css/common_22693f5.css">
+    <link rel="stylesheet" href="/min/static/css/common_40d73ef.css">
     <!-- Custom styles -->
     <link href="/min/static/css/page_31c6c6d.css" rel="stylesheet" type="text/css" media="all">
     <link href="/min/static/css/github_5dbe7fc.css" rel="stylesheet" type="text/css" media="all">
@@ -53,14 +53,14 @@
             </div>
 
             <div class="nav-right">
-                <a href="https://github.com/meili/min-cli"><i class="icon icon-wechat"></i></a>
+                <span><i class="icon icon-wechat"></i></span>
                 <a href="https://github.com/meili/min-cli"><i class="icon icon-github"></i></a>
                 <div class="code-wechat"><img src="https://s10.mogucdn.com/mlcdn/c45406/171214_461864fllj12114eg6eg2ef68ge6e_752x974.jpg" /></div>
             </div>
         </nav>
     </header>
 </div>
-<script type="text/javascript" src="/min/static/js/jquery.min.js"></script>
+<script type="text/javascript" src="/min/static/js/jquery.min_7dc7ccf.js"></script>
 <script language="javascript">
     $(document).ready(function(){
 
@@ -113,7 +113,7 @@
 </li>
 </ul>
 </li>
-<li><a href="/min/docs/features/index.html">功能特性</a><ul>
+<li>功能特性<ul>
 <li><a href="/min/docs/features/single-file-mode.html">单文件模式</a></li>
 <li><a href="/min/docs/features/npm.html">支持加载外部 NPM 包</a></li>
 <li><a href="/min/docs/features/babel.html">支持 ES6/7 新特性</a></li>
@@ -121,7 +121,7 @@
 <li><a href="/min/docs/features/demo-api.html">自动集成示例文档</a></li>
 </ul>
 </li>
-<li><a href="/min/docs/advance/index.html">进阶介绍</a><ul>
+<li>进阶介绍<ul>
 <li><a href="/min/docs/advance/config.html">min.config.json 配置</a></li>
 <li><a href="/min/docs/advance/single-file-explain.html">单文件说明</a></li>
 <li><a href="/min/docs/advance/global-layout.html">全局公共模板</a></li>
@@ -163,7 +163,7 @@
 <li>微信版本要求：6.5.16及以上</li>
 </ul>
 <p><strong>2、es6 转 es5 </strong></p>
-<p>Wepy 要求在开发者工具中关闭es6 =&gt; es5 功能，而 min 编译出来的文件默认为 es6 代码，这就导致在 wepy 项目中无法使用 min 组件。Min cli 在 1.0.4 版本后集成了babel 插件，可编译出 es5 代码，在 wepy 项目中使用。只需在 min.config.json 增加 babel 的配置，具体配置如下所示： </p>
+<p>Wepy 要求在开发者工具中关闭es6 =&gt; es5 功能，而 min 编译出来的文件默认为 es6 代码，这就导致在 wepy 项目中无法使用 min 组件。Min cli 在 1.0.4 版本后集成了babel 插件，可编译出 es5 代码，在 wepy 项目中使用。只需在 min.config.json 增加 babel 的配置，具体配置如下所示：</p>
 <pre><code class="hljs lang-json">{
   "<span class="hljs-attribute">compilers</span>": <span class="hljs-value">{
     "<span class="hljs-attribute">babel</span>": <span class="hljs-value">{
@@ -232,7 +232,7 @@ const <span class="hljs-variable">$toast</span> = this.<span class="hljs-variabl
 </blockquote>
 <p><strong>在页面中使用 minui 组件时，dist 目录下页面文件相对于组件文件的路径即为组件的路径。</strong></p>
 <p>为方便理解，用一个示例说明一下。首先来看一个安装了 wxc-toast 组件并且经过 wepy 编译过后的工程目录结构：</p>
-<pre><code>|<span class="hljs-string">—— dist                            编译后的文件目录，微信开发者工具中指定的目录
+<pre><code class="hljs lang-tree">|<span class="hljs-string">—— dist                            编译后的文件目录，微信开发者工具中指定的目录
 </span>|<span class="hljs-string">    </span>|<span class="hljs-string">—— components
 </span>|<span class="hljs-string">    </span>|<span class="hljs-string">—— packages                    minui 组件的安装路径
 </span>|<span class="hljs-string">    </span>|<span class="hljs-string">    </span>|<span class="hljs-string">—— @minui
@@ -258,7 +258,8 @@ const <span class="hljs-variable">$toast</span> = this.<span class="hljs-variabl
 </span>|<span class="hljs-string">    </span>|<span class="hljs-string">—— app.wpy
 </span>|<span class="hljs-string">—— package.json
 └── min.config.json</span>
-</code></pre><p>在这个工程中，pages/index/index.wepy 页面中使用 wxc-toast 组件时的路径应该是：</p>
+</code></pre>
+<p>在这个工程中，pages/index/index.wepy 页面中使用 wxc-toast 组件时的路径应该是：</p>
 <pre><code class="hljs lang-javascript"><span class="xml">usingComponents: </span><span class="hljs-expression">{
   '<span class="hljs-variable">wxc-toast</span>': '<span class="hljs-variable">..</span><span class="hljs-end-block">/..</span><span class="hljs-end-block">/packages</span>/@<span class="hljs-variable">minui</span><span class="hljs-end-block">/wxc-toast</span><span class="hljs-end-block">/dist</span><span class="hljs-end-block">/index</span>'
 }</span><span class="xml"></span>

@@ -6,14 +6,14 @@
     <meta name="description" content="Min 一套完整的小程序组件化解决方案" />
     <meta name="keywords" content=",蘑菇街前端团队,Min,蘑菇街Min,蘑菇街前端,min,组件化,小程序,小程序组件化,小程序组件化解决方案" />
     <link rel="shortcut icon" href="/min/static/images/favicon.ico"/>
-    <title>Min :  调试页面</title>
+    <title>Min -  调试页面</title>
     <meta name="description" content="Min 一套完整的小程序组件化解决方案">
     <meta name="author" content="min-team">
 
     <!-- Enable responsive viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="/min/static/css/common_22693f5.css">
+    <link rel="stylesheet" href="/min/static/css/common_40d73ef.css">
     <!-- Custom styles -->
     <link href="/min/static/css/page_31c6c6d.css" rel="stylesheet" type="text/css" media="all">
     <link href="/min/static/css/github_5dbe7fc.css" rel="stylesheet" type="text/css" media="all">
@@ -53,14 +53,14 @@
             </div>
 
             <div class="nav-right">
-                <a href="https://github.com/meili/min-cli"><i class="icon icon-wechat"></i></a>
+                <span><i class="icon icon-wechat"></i></span>
                 <a href="https://github.com/meili/min-cli"><i class="icon icon-github"></i></a>
                 <div class="code-wechat"><img src="https://s10.mogucdn.com/mlcdn/c45406/171214_461864fllj12114eg6eg2ef68ge6e_752x974.jpg" /></div>
             </div>
         </nav>
     </header>
 </div>
-<script type="text/javascript" src="/min/static/js/jquery.min.js"></script>
+<script type="text/javascript" src="/min/static/js/jquery.min_7dc7ccf.js"></script>
 <script language="javascript">
     $(document).ready(function(){
 
@@ -113,7 +113,7 @@
 </li>
 </ul>
 </li>
-<li><a href="/min/docs/features/index.html">功能特性</a><ul>
+<li>功能特性<ul>
 <li><a href="/min/docs/features/single-file-mode.html">单文件模式</a></li>
 <li><a href="/min/docs/features/npm.html">支持加载外部 NPM 包</a></li>
 <li><a href="/min/docs/features/babel.html">支持 ES6/7 新特性</a></li>
@@ -121,7 +121,7 @@
 <li><a href="/min/docs/features/demo-api.html">自动集成示例文档</a></li>
 </ul>
 </li>
-<li><a href="/min/docs/advance/index.html">进阶介绍</a><ul>
+<li>进阶介绍<ul>
 <li><a href="/min/docs/advance/config.html">min.config.json 配置</a></li>
 <li><a href="/min/docs/advance/single-file-explain.html">单文件说明</a></li>
 <li><a href="/min/docs/advance/global-layout.html">全局公共模板</a></li>
@@ -160,7 +160,7 @@
 <pre><code class="hljs lang-bash">$ <span class="hljs-built_in">min</span> dev [<span class="hljs-keyword">name</span>]
 </code></pre>
 <a name="%E8%B0%83%E8%AF%95%E6%AD%A5%E9%AA%A4" class="title-anchor"></a><h4 class="" >调试步骤</h4><ul>
-<li>进入Min小程序项目的根目录</li>
+<li>进入 <strong>Min小程序项目</strong> 的根目录</li>
 </ul>
 <pre><code class="hljs lang-bash"><span class="hljs-variable">$ </span>cd ~<span class="hljs-regexp">/your_weapp_project/</span>
 </code></pre>
@@ -170,12 +170,12 @@
 <pre><code class="hljs lang-bash">$ <span class="hljs-built_in">min</span> <span class="hljs-built_in">dev</span>
 </code></pre>
 <ul>
-<li>调试单个页面。以项目 pages 目录下的 home 页面举例</li>
+<li>调试单个页面。以 pages 目录下的 home 页面举例</li>
 </ul>
 <pre><code class="hljs lang-bash">$ <span class="hljs-built_in">min</span> <span class="hljs-built_in">dev</span> home
 </code></pre>
 <ul>
-<li>调试多个页面，请使用英文逗号分隔。以项目 pages 目录下的 home 和 about 页面举例</li>
+<li>调试多个页面，请使用英文逗号分隔。以 pages 目录下的 home 和 about 页面举例</li>
 </ul>
 <pre><code class="hljs lang-bash">$ <span class="hljs-keyword">min</span> dev home,<span class="hljs-keyword">about</span>
 </code></pre>
@@ -184,8 +184,8 @@
 </blockquote>
 <a name="%E8%AE%BE%E7%BD%AE%E5%B0%8F%E7%A8%8B%E5%BA%8F%E9%A6%96%E9%A1%B5" class="title-anchor"></a><h4 class="" >设置小程序首页</h4><blockquote>
 <p>调试整个工程，默认将 Tabbar 第一个选项设置为小程序首页，缺省值为 pages/home/index</p>
-<p>调试单个页面，会将当前页面设置为小程序首页</p>
-<p>调试多个页面，会将第一个页面设置为小程序首页</p>
+<p>调试单个页面，默认将当前调试页面设置为小程序首页</p>
+<p>调试多个页面，默认将当前第一个调试页面设置为小程序首页</p>
 </blockquote>
 
     </div>
