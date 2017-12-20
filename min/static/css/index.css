@@ -195,7 +195,7 @@ section.back-blue .section-heading{
   bottom: 0px;
   width: 100%;
   min-height: 30px;
-  padding: 20px;
+  padding: 20px 0;
   text-align: center;
   /*background-color: #E1FFFF;*/
   background-color: #32b1af;
