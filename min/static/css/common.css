@@ -416,19 +416,35 @@ nav .nav-left .nav-link:hover:after {
 
 .code-wechat {
   display: none;
-  width: 189px;
-  height: 240px;
+  width: 300px;
+  height: 320px;
   position: absolute;
-  top: 40px;
+  top: 55px;
   left: -63px;
+  border-radius: 8px;
+  box-shadow: 0 24px 80px -2px #999 !important;
+  transition: box-shadow 1s;
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
 }
+.code-wechat .text {
+  word-wrap: break-word;
+  word-break: normal;
+  font-size: 14px;
+  font-weight: bold;
+  color: #666;
+}
+
+.code-wechat .text strong {
+  color: #e96900;
+}
+
 .code-wechat img{
-  width: 100%;
-  height: 100%;
+  width: 215px;
+  height: 215px;
 }
-.code-wechat:hover {
-  cursor: pointer;
-}
+
 .icon-item {
   font-size: 24px;
   margin-right: 15px;
