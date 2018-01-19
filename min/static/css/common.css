@@ -420,7 +420,7 @@ nav .nav-left .nav-link:hover:after {
   height: 320px;
   position: absolute;
   top: 55px;
-  left: -63px;
+  left: -120px;
   border-radius: 8px;
   box-shadow: 0 24px 80px -2px #999 !important;
   transition: box-shadow 1s;
@@ -429,6 +429,7 @@ nav .nav-left .nav-link:hover:after {
   text-align: center;
 }
 .code-wechat .text {
+  line-height: 20px;
   word-wrap: break-word;
   word-break: normal;
   font-size: 14px;
@@ -548,7 +549,7 @@ nav .nav-left .nav-link:hover:after {
     font-size: 16px;
   }
   .code-wechat {
-    left: -110px;
+    left: -220px;
   }
 }
 
