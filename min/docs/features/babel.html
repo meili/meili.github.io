@@ -160,26 +160,32 @@
     <div class="content api with-sidebar">
         <a name="%E6%94%AF%E6%8C%81%20ES6/7%20%E6%96%B0%E7%89%B9%E6%80%A7" class="title-anchor"></a><h3 class="" id="支持 ES6/7 新特性">支持 ES6/7 新特性</h3><p>Min 默认使用 babel 编译 JavaScript 模块、从而可以支持 ES6/7 的一些新特性</p>
 <blockquote>
-<p>从 Min Cli v1.0.5 版本开始，用户可以通过修改 <a href="/min/docs/advance/config.html">min.config.json</a> 配置文件，配置自己熟悉的 babel 环境进行开发。默认开启使用了一些新的特性如 <code>promise</code>、<code>async/await</code>。</p>
+<p>从 Min Cli v1.0.5 版本开始，用户可以通过修改 <a href="/min/docs/advance/config.html">min.config.json</a> 配置文件，配置自己熟悉的 babel 环境进行开发。</p>
 </blockquote>
-<p>示例代码：</p>
+<a name="%E5%9C%A8%20Min%20%E4%B8%AD%E4%BD%BF%E7%94%A8%20%3Ccode%3Easync/await%3C/code%3E" class="title-anchor"></a><h4 class="" >在 Min 中使用 <code>async/await</code></h4><ul>
+<li><strong>示例代码</strong></li>
+</ul>
 <pre><code class="hljs lang-js">export default {
-    getData() {
-        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> Promise(<span class="hljs-function"><span class="hljs-params">(resolve, reject)</span> =&gt;</span> {
-            setTimeout(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
-                resolve({
-                  <span class="hljs-attribute">status</span>: <span class="hljs-string">'resolve'</span>
-                });
-            }, <span class="hljs-number">3000</span>);
+  getData() {
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> Promise(<span class="hljs-function"><span class="hljs-params">(resolve, reject)</span> =&gt;</span> {
+      setTimeout(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+        resolve({
+          <span class="hljs-attribute">status</span>: <span class="hljs-string">'resolve'</span>
         });
-    };
+      }, <span class="hljs-number">3000</span>);
+    });
+  };
 
-    async onLoad() {
-        let data = await <span class="hljs-keyword">this</span>.getData();
-        <span class="hljs-built_in">console</span>.log(data.status);
-    };
+  async onLoad() {
+    let data = await <span class="hljs-keyword">this</span>.getData();
+    <span class="hljs-built_in">console</span>.log(data.status);
+  };
 }
 </code></pre>
+<ul>
+<li><strong>配置介绍</strong></li>
+</ul>
+<p>在 Min 中使用 <code>async/await</code>，请先在项目中启用 <code>ES6/7</code> 新特性配置，安装Babel插件和runtime包，如果项目还未进行配置请移步到 <a href="/min/docs/features/async-function.html">在 Min 中使用 async/await 的配置介绍</a></p>
 
     </div>
 </div>
